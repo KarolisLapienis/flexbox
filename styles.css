@@ -1,53 +1,63 @@
-@import
-    url("https://fonts.googleapis.com/css?family=Tangerine|Inconsolata|Droid+Sans");
 
 body, h1, h2, a, div{
     margin: 0;
     padding: 0;
-    font-size: 40px;
+    font-size: 20px;
     font-weight: 500;
-    font-family: 'Tangerine', serif;
+    font-family: 'Monotype Corsiva', cursive;
 }
 
 body {
     height: 100vh;
-    font-weight: 700;
-    font-size: 16px;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    font-style: inherit;
+    color: inherit;
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    overflow: scroll;
 }
 
 header {
-    font-size: 12px;
     display: flex;
     margin-top: 0.15rem;
     border-top: 0.15rem solid black;
     border-bottom: 0.15rem solid
     black;
-    height: 3em;
+    height: 3rem;
     justify-content: space-between;
 }
 
 .headerNav {
+    display: flex;
     align-self: center;
-
+    width: auto;
+    justify-content: space-around;
+    width: 18em;
 }
 
-h1 {
-    font-style: italic;
+.headerNav a {
+    font-size: 17px;
 }
-.logo {
+
+.headerLogo {
     display: flex;
     align-items: center;
-    flex-shrink: 1;
+    font-size: 24px;
+
 }
 
-.logo img{
-    
+.headerLogo img{
+    width: 2rem;
+}
+
+.headerLogo a{
+    font-size: 30px;
 }
 
 .content {
@@ -64,11 +74,4 @@ h1 {
     border-radius: 10px;
     align-self: center;
     text-align: center;
-    flex-basis: 1;
-}
-
-@media screen and (max-width: 768px) {
-    header {
-
-    }
 }
