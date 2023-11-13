@@ -35,7 +35,7 @@ header {
     align-self: center;
     width: auto;
     justify-content: space-around;
-    width: 18em;
+    width: 30%;
 }
 
 .headerNav a {
@@ -105,9 +105,8 @@ header {
 
 .gydomieji div {
     display: flex;
-    border: black solid;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     gap: 2rem;
     
 }
