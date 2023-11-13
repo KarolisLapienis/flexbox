@@ -94,7 +94,7 @@ header {
 .gydomieji {
     display: flex;
     flex-direction: column;
-    min-height: 91vh;
+    min-height: 91.5vh;
 }
 
 .gydomieji h2 {
