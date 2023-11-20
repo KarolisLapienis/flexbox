@@ -1,55 +1,89 @@
-
-body, h1, h2, a, div, img, p {
-    margin: 0;
+*, *::before, *::after {
+    box-sizing: border-box;
     padding: 0;
-    font-family: 'Monotype Corsiva', cursive;
-    font-size: 20px;
-    font-weight: 500;
+    margin: 0;
 }
 
-body {
-    box-sizing: border-box;
+body, html {
+    font-family: 'Monotype Corsiva', cursive;
+    font-size: 10px;
 }
 
 a {
     text-decoration: none;
-    font-style: inherit;
     color: inherit;
+}
+
+.top-white-line {
+    padding-top: 0.2rem;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
 }
 
 header {
     display: flex;
-    margin-top: 0.15rem;
-    border-top: 0.15rem solid black;
-    border-bottom: 0.15rem solid black;
-    height: 3rem;
     justify-content: space-between;
     position: sticky;
-    top: 0;
-    z-index: 1;
+    top: 0.2rem;
     background-color: white;
+    z-index: 1;
+    border-top: 0.2rem solid black;
+    border-bottom: 0.2rem solid black;
+}
+
+
+.header-left {
+    display: flex;
+    align-items: center;
+    padding-left: 0.5rem;
+}
+
+.header-left img {
+    width: 50px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 500;
 }
 
 .headerNav {
     display: flex;
-    align-self: center;
-    width: auto;
-    justify-content: space-around;
-    width: 30%;
+    align-items: center;
+    gap: 2rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
 }
+
 
 .headerNav a {
-    font-size: 1rem;
+    font-size: 2rem;
 }
 
-.headerLogo {
-    display: flex;
-    align-items: center;
-    font-size: 1.5rem;
-}
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+    }
 
-.headerLogo img {
-    width: 40px;
+    .header-left {
+        border-top: 0.2rem solid black;
+        border-bottom: 0.2rem solid black;
+    }
+
+    .header-left img {
+        width: 70px;
+    }
+
+    .header-left h1{
+        display: none;
+    }
+
+    .headerNav{
+        height: 5rem;
+        justify-content: space-between;
+    }
 }
 
 .home::before {
@@ -68,60 +102,34 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 91vh;
     position: relative;
+    min-height: 94dvh;
 }
 
 .home-rectangle {
+    min-width: 70%;
+    min-height: 70dvh;
+    background-color: white;
     display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
-    padding: 1rem;
-    align-items: center;
-    width: 70%;
-    min-height: 40ch;
-    background-color: white;
-}
-
-.home-rectangle h2 {
-    font-size: 2.5rem;
+    font-size: 20px;
+    gap: 1rem;
 }
 
 .home-rectangle img {
-    width: 10rem;
+    width: 200px;
 }
 
-.gydomieji {
+.content {
     display: flex;
     flex-direction: column;
-    min-height: 91.5vh;
 }
-
-.gydomieji h2 {
-    align-self: center;
-    padding: 2rem;
-    font-size: 1.3rem;
-}
-
-.gydomieji div {
+.gydomieji-article{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 2rem;
-    
+    flex-shrink: 1;
 }
-.gydomieji-article {
-    display: flex;
-    gap: 1em;
-    align-items: center;
-    max-width: 40%;
-}
-
-.gydomieji-article img {
-    width: 13rem;
-    height: 6rem;
-}
-
-.gydomieji-article p {
-    font-size: 0.8rem;
+.gydomieji-article img{
+    width: 300px;
 }
